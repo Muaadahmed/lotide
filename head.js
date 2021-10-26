@@ -3,5 +3,9 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑 🛑 🛑 Assertion Failed: ${actual} !==  ${expected}`);
 };
 
-assertEqual("Lighthouse Labs", "Lighthouse Labs");
-assertEqual(1, '1');
+const head = function(array) {
+  return array[0];
+}
+
+assertEqual(head([5,6,7]), 5);
+assertEqual(head(["Light", "Lighthouse", "Labs"]), "Hello");
