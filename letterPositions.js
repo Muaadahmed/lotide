@@ -5,9 +5,13 @@ const assertArraysEqual = function(arr1, arr2){
 
 const eqArrays = function(arr1, arr2) {
   let result = false;
-  for (let el1 of arr1) {
-    for (let el2 of arr2) {
-      el1 === el2 ? result = true : result = false;
+  if(arr1.length === 0 && arr2.length === 0){
+    return true;
+  } else {
+    for (let el1 of arr1) {
+      for (let el2 of arr2) {
+        el1 === el2 ? result = true : result = false;
+      }
     }
   }
   return result;
